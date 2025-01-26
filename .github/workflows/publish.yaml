@@ -2,33 +2,31 @@ name: Publish to npm
 
 on:
   push:
-    tags:
-      - "v*" # Trigger on any tag starting with 'v' (e.g., v1.0.0)
+    branches:
+      - main
 
 jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      # Checkout the repository
-      - name: Checkout code
-        uses: actions/checkout@v2
+    - uses: actions/checkout@v2
 
-      # Set up Node.js
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: "18" # Specify your Node.js version
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+        registry-url: 'https://registry.npmjs.org/'
 
-      # Install dependencies
-      - name: Install dependencies
-        run: npm install
+    - name: Authenticate to npm
+      run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
 
-      # Build the package (optional, if you need to run the build step before publishing)
-      - name: Build package
-        run: npm run build
+    - name: Install dependencies
+      run: npm install
 
-      # Publish to npm
-      - name: Publish to npm
-        run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+    - name: Build project
+      run: npm run build
+
+    - name: Publish to npm
+      run: npm publish
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
