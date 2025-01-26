@@ -1,7 +1,37 @@
+import "./main.css";
+import {
+  CalendarCanvasEvent,
+  CalendarCanvasProps,
+  CalendarCanvasView,
+} from "../types";
 import React from "react";
-import { CalendarCanvasProps } from "../types";
-import styles from "./main.module.css";
-const CalendarCanvas: React.FC<CalendarCanvasProps> = ({ children }) => {
-  return <div className={styles["canvas-calendar"]}>see this{children}</div>;
+import { calendarCanvasReducer } from "../contexts/reducers";
+import { CalendarCanvasContext } from "../contexts";
+const CalendarCanvas = <
+  TCalendarCanvasEvent extends CalendarCanvasEvent = CalendarCanvasEvent,
+>({
+  children,
+  className = "",
+  defaultDate,
+  defaultView = CalendarCanvasView.MONTH,
+  events = [],
+}: CalendarCanvasProps<TCalendarCanvasEvent>) => {
+  const [data, dispatch] = React.useReducer(calendarCanvasReducer, {
+    view: defaultView,
+    events,
+  });
+
+  React.useEffect(() => {
+    dispatch({
+      type: "date:set",
+      value: defaultDate || new Date(),
+    });
+  }, [defaultDate]);
+  return (
+    <CalendarCanvasContext.Provider value={{ ...data, dispatch }}>
+      <div className={`calendar-canvas ${className}`}>{children}</div>
+    </CalendarCanvasContext.Provider>
+  );
 };
+
 export default CalendarCanvas;
