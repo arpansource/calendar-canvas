@@ -9,7 +9,6 @@ const packageJson = require("./package.json");
 
 export default [
   {
-    preserveModules: true,
     input: "src/index.ts",
     output: [
       {
@@ -31,7 +30,10 @@ export default [
         tsconfig: "./tsconfig.json",
       }),
       terser(),
-      postcss(),
+      postcss({
+        extract: "main.css",
+        minimize: true,
+      }),
     ],
     external: ["react", "react-dom"],
   },
