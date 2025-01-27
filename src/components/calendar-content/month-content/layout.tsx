@@ -7,10 +7,11 @@ const MonthLayout: React.FC<MonthLayoutProps> = ({
   slotDate,
   dateInMonth = false,
   style,
+  className,
 }) => {
   return (
     <div
-      className={`month-layout ${!dateInMonth && "inactive-month"}`}
+      className={`month-layout ${className ? className : !dateInMonth ? "inactive-month" : ""}`}
       style={{
         ...style,
         ...(dayjs(slotDate || new Date())

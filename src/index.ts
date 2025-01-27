@@ -9,4 +9,6 @@ export { default as MonthContentHeader } from "./components/calendar-content/con
 export { default as WeekContentHeader } from "./components/calendar-content/content-header/WeekHeader";
 export { default as TimeFrames } from "./components/calendar-content/TimeFrames";
 export { default as DayLayout } from "./components/calendar-content/day-content/layout";
+export { default as WeekLayout } from "./components/calendar-content/week-content/layout";
+export { default as MonthLayout } from "./components/calendar-content/month-content/layout";
 export * from "./types";

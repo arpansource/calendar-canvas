@@ -61,7 +61,7 @@ export interface CalendarDayContentProps extends IClassName {
   layout?: React.FC<DayLayoutProps>;
   template?: React.FC<DayTemplateProps>;
 }
-export interface WeekLayoutProps extends ICssProperties {
+export interface WeekLayoutProps extends ICssProperties, IClassName {
   slotDate?: Date;
 }
 export interface WeekTemplateProps<
@@ -73,7 +73,7 @@ export interface CalendarWeekContentProps extends IClassName {
   layout?: React.FC<WeekLayoutProps>;
   template?: React.FC<WeekTemplateProps>;
 }
-export interface MonthLayoutProps extends ICssProperties, IWrapper {
+export interface MonthLayoutProps extends ICssProperties, IWrapper, IClassName {
   slotDate?: Date;
   dateInMonth?: boolean;
 }
