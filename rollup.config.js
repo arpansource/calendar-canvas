@@ -14,12 +14,12 @@ export default [
       {
         file: packageJson.main,
         format: "cjs",
-        sourcemap: true,
+        // sourcemap: true, // only enable it to debug manually
       },
       {
         file: packageJson.module,
         format: "esm",
-        sourcemap: true,
+        // sourcemap: true, // only enable it to debug manually
       },
     ],
     plugins: [
