@@ -69,12 +69,21 @@
     border-right: 1px solid black;
 }
 .calendar-canvas .week-content-header {
-    display: grid;
-    grid-template-columns: repeat(8, minmax(0, 1fr));
-    text-align: center;
+    width: 100%;
+    display: flex;
 }
-.calendar-canvas .week-content-header > .week-label {
+.calendar-canvas .time-gutter {
+    flex-shrink: 0;
+}
+.calendar-canvas .header-item-wrapper {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.calendar-canvas .header-item-wrapper > .week-label {
     border-left: 1px solid black;
+    text-align: center;
 }
 .calendar-canvas .calendar-content-pane {
     width: 100%;
@@ -83,13 +92,12 @@
     padding: 0.5rem 0px;
 }
 
-.calendar-canvas .calendar-content-pane > div:first-child {
+.calendar-canvas .calendar-content-pane .calendar-content-wrapper {
     width: 100%;
-    display: grid;
-    height: 100%;
-    grid-template-columns: repeat(8, minmax(0, 1fr));
+    display: flex;
 }
 .calendar-canvas .time-frames {
+    flex-shrink: 0;
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
 }
@@ -102,10 +110,12 @@
     top: -0.75rem;
     height: 1.28rem;
     background-color: white;
+    padding-right: 0.8rem;
     font-size: 0.875rem;
 }
 .calendar-canvas .day-content,
 .calendar-canvas .week-content {
+    flex-grow: 1;
     display: grid;
     position: relative;
     grid-template-columns: repeat(7, minmax(0, 1fr));
@@ -154,9 +164,9 @@
 }
 
 .calendar-canvas .month-content-events {
+    flex-grow: 1;
     display: grid;
     grid-template-columns: repeat(7, minmax(0, 1fr));
-    grid-column: span 8 / span 8;
 }
 .calendar-canvas .month-content-events .month-layout {
     display: flex;

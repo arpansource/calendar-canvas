@@ -23,5 +23,11 @@ export const calendarCanvasReducer = (
         events: action.value,
       };
     }
+    case "timegutter:set": {
+      return {
+        ...data,
+        timegutter: action.value,
+      };
+    }
   }
 };

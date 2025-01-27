@@ -1,6 +1,7 @@
 import dayjs from "dayjs";
 import useCalendarCanvas from "../../hooks/useCalendarCanvas";
 import { TimeFramesProps } from "../../types";
+import React from "react";
 
 const TimeFrames: React.FC<TimeFramesProps> = ({ className = "", style }) => {
   const { getTimeFrames } = useCalendarCanvas();

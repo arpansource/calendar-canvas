@@ -1,22 +1,24 @@
 import dayjs from "dayjs";
 import useCalendarCanvas from "../../../hooks/useCalendarCanvas";
 import { WeekContentHeaderProps } from "../../../types";
+import TimeGutter from "./TimeGutter";
 
 const WeekHeader: React.FC<WeekContentHeaderProps> = ({ className = "" }) => {
-  const { getWeekDates } = useCalendarCanvas();
+  const { getWeekDates, timegutter } = useCalendarCanvas();
   const dates = getWeekDates();
-
   return (
-    <div className="week-content-header grid grid-cols-8 w-full">
-      <div className="col-span-1"></div>
-      {dates.map((d, index) => (
-        <div
-          className="week-label col-span-1 border grid place-content-center"
-          key={index}
-        >
-          {dayjs(d).format("ddd DD")}
-        </div>
-      ))}
+    <div className={`week-content-header ${className}`}>
+      <TimeGutter
+        style={{ minWidth: `${timegutter}px` }}
+        className="time-gutter"
+      />
+      <div className="header-item-wrapper">
+        {dates.map((d, index) => (
+          <div className="week-label" key={index}>
+            {dayjs(d).format("ddd DD")}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

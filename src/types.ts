@@ -37,15 +37,21 @@ export interface CalendarCanvasProps<
   TCalendarCanvasEvent extends object = CalendarCanvasEvent,
 > extends IWrapper,
     IClassName {
+  /** The default date for the calendar canvas */
   defaultDate?: Date;
+  /** The events to be displayed on the calendar canvas */
   events?: TCalendarCanvasEvent[];
+  /** The default view for the calendar canvas */
   defaultView?: CalendarCanvasViewUnion;
+  /** The width of gutter on day and week header */
+  timegutter?: number;
 }
 
 /*==============================================
 layout & templates
 ===============================================*/
 export interface CalendarHeaderProps extends IClassName {}
+export interface TimeGutterProps extends ICssProperties, IClassName {}
 export interface CalendarContentWrapperProps extends IWrapper, IClassName {}
 export interface CalendarContentHeaderProps extends IClassName {}
 export interface MonthContentHeaderProps extends IClassName {}
@@ -129,10 +135,15 @@ interface CalendarCanvasViewAction {
   type: "view:set";
   value: CalendarCanvasViewUnion;
 }
+interface CalendarWeekGutterAction {
+  type: "timegutter:set";
+  value: number;
+}
 export type CalendarCanvasAction =
   | CalendarCanvasDateAction
   | CalendarCanvasEventsAction
-  | CalendarCanvasViewAction;
+  | CalendarCanvasViewAction
+  | CalendarWeekGutterAction;
 
 export interface CalendarCanvasContext<
   TCalendarCanvasEvent extends CalendarCanvasEvent = CalendarCanvasEvent,
@@ -140,6 +151,8 @@ export interface CalendarCanvasContext<
   date?: Date;
   view?: CalendarCanvasViewUnion;
   events?: TCalendarCanvasEvent[];
+  /* The width of gutter on day and week header */
+  timegutter?: number;
   dispatch?: (action: CalendarCanvasAction) => void;
 }
 
@@ -175,6 +188,11 @@ export interface UseCalendarReturnType<
   getMonthDates: () => Date[];
   /** Returns array of date with exactly 24 elements */
   getTimeFrames: () => Date[];
+  /**
+   * Set width of the time gutter. (usefull in week and optional in day)
+   * @param width: width in pixel.
+   */
+  setTimeGutterWidth: (width: number) => void;
 }
 
 export interface UseShellEvents {

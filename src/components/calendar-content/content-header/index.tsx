@@ -12,9 +12,7 @@ const CalendarContentHeader: React.FC<CalendarContentHeaderProps> = ({
   if (view === "day") return;
 
   return (
-    <div
-      className={`content-header min-h-fit flex-shrink-0 flex items-center ${className}`}
-    >
+    <div className={`content-header ${className}`}>
       {view === "week" && <WeekHeader />}
       {view === "month" && <MonthHeader />}
     </div>

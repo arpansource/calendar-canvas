@@ -87,6 +87,13 @@ const useCalendarCanvas = <
     return times;
   };
 
+  const setTimeGutterWidth = (width: number) => {
+    dispatch?.({
+      type: "timegutter:set",
+      value: width,
+    });
+  };
+
   return {
     ...contextValue,
     setDate,
@@ -97,6 +104,7 @@ const useCalendarCanvas = <
     getWeekDates,
     getMonthDates,
     getTimeFrames,
+    setTimeGutterWidth,
   };
 };
 export default useCalendarCanvas;

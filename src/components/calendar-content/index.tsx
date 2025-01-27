@@ -11,7 +11,7 @@ const CalendarContent: React.FC<CalendarContentProps> = ({
   componentClasses,
   templates,
 }) => {
-  const { view } = useCalendarCanvas();
+  const { view, timegutter } = useCalendarCanvas();
   // height should be maintained from here. ( it will be applied in both timeframes and content pane.)
   // also the same height factor should be applied in MonthContent see the component.
   const heightOfContentPane =
@@ -24,16 +24,17 @@ const CalendarContent: React.FC<CalendarContentProps> = ({
     weekContent = "",
     monthContent = "",
   } = componentClasses || {};
+
   return (
     <div className={`calendar-content-pane ${className}`}>
       <div
-        className={`${contentWrapper}`}
+        className={`calendar-content-wrapper ${contentWrapper}`}
         style={{ height: heightOfContentPane }}
       >
         {view !== "month" && (
           <TimeFrames
             className={timeFrames}
-            style={{ height: heightOfContentPane }}
+            style={{ height: heightOfContentPane, minWidth: timegutter }}
           />
         )}
         {view === "day" && (

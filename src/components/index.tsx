@@ -13,11 +13,13 @@ const CalendarCanvas = <
   children,
   className = "",
   defaultDate,
+  timegutter = 150,
   defaultView = CalendarCanvasView.MONTH,
   events = [],
 }: CalendarCanvasProps<TCalendarCanvasEvent>) => {
   const [data, dispatch] = React.useReducer(calendarCanvasReducer, {
     view: defaultView,
+    timegutter,
     events,
   });
 
