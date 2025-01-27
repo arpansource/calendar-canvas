@@ -2,6 +2,14 @@
 
 A highly customizable and lightweight calendar library to render your events. This library offers an easy way to create interactive and customizable calendar components for your React applications.
 
+## Screenshots
+- Month View
+![Screenshot of month view created using calendar-canvas](./src/screenshots/calendar-canvas-month-view.png)
+- Week View
+![Screenshot of week view created using calendar-canvas](./src/screenshots/calendar-canvas-week-view.png)
+- Day View
+![Screenshot of day view created using calendar-canvas](./src/screenshots/calendar-canvas-day-view.png)
+
 ## Installation
 
 To install the `calendar-canvas` library, run the following command:
