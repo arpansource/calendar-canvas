@@ -17,7 +17,6 @@ const CalendarContent: React.FC<CalendarContentProps> = ({
     view === "month" ? "calc(9.5rem*5)" : "calc(7rem*24)";
   const WeekTemplate = templates?.content?.week;
   const MonthTemplate = templates?.content?.month;
-  const DayContentTemplate = templates?.content?.day;
 
   return (
     <div className={`calendar-content-pane ${className}`}>
@@ -25,9 +24,24 @@ const CalendarContent: React.FC<CalendarContentProps> = ({
         {view !== "month" && (
           <TimeFrames style={{ height: heightOfContentPane }} />
         )}
-        {view === "day" && <DayContent />}
-        {view === "week" && <WeekContent />}
-        {view === "month" && <MonthContent />}
+        {view === "day" && (
+          <DayContent
+            template={templates?.content?.day}
+            layout={templates?.layout?.day}
+          />
+        )}
+        {view === "week" && (
+          <WeekContent
+            template={templates?.content?.week}
+            layout={templates?.layout?.week}
+          />
+        )}
+        {view === "month" && (
+          <MonthContent
+            template={templates?.content?.week}
+            layout={templates?.layout?.week}
+          />
+        )}
       </div>
     </div>
   );
