@@ -1,7 +1,7 @@
 import { DayLayoutProps } from "../../../types";
 
-const DayLayout: React.FC<DayLayoutProps> = ({ style }) => {
-  return <div className="day-layout" style={style} />;
+const DayLayout: React.FC<DayLayoutProps> = ({ style, className }) => {
+  return <div className={`day-layout ${className}`} style={style} />;
 };
 
 export default DayLayout;

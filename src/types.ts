@@ -51,7 +51,7 @@ export interface CalendarContentHeaderProps extends IClassName {}
 export interface MonthContentHeaderProps extends IClassName {}
 export interface WeekContentHeaderProps extends IClassName {}
 export interface TimeFramesProps extends IClassName, ICssProperties {}
-export interface DayLayoutProps extends ICssProperties {}
+export interface DayLayoutProps extends ICssProperties, IClassName {}
 export interface DayTemplateProps<
   TCalendarCanvasEvent extends CalendarCanvasEvent = CalendarCanvasEvent,
 > extends ICssProperties {
