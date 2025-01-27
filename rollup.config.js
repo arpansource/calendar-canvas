@@ -5,6 +5,7 @@ import { dts } from "rollup-plugin-dts";
 import terser from "@rollup/plugin-terser";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import postcss from "rollup-plugin-postcss";
+// import { visualizer } from 'rollup-plugin-visualizer';
 const packageJson = require("./package.json");
 
 export default [
@@ -34,6 +35,7 @@ export default [
         extract: "main.css",
         minimize: true,
       }),
+      // visualizer({ filename: './bundle-analysis.html' }), // only to visualize bundle size.
     ],
     external: ["react", "react-dom"],
   },
