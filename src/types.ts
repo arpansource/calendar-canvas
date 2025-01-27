@@ -94,15 +94,23 @@ export interface CalendarMonthContentProps extends IClassName {
 export interface CalendarContentProps extends IClassName {
   templates?: {
     content?: {
-      week?: React.FC;
-      day?: React.FC;
-      month?: React.FC;
+      week?: React.FC<WeekTemplateProps>;
+      day?: React.FC<DayTemplateProps>;
+      month?: React.FC<MonthTemplateProps>;
     };
     layout?: {
-      day?: React.FC;
-      month?: React.FC;
-      week?: React.FC;
+      day?: React.FC<DayLayoutProps>;
+      month?: React.FC<MonthLayoutProps>;
+      week?: React.FC<WeekLayoutProps>;
     };
+    timeFrames?: React.FC<TimeFramesProps>;
+  };
+  componentClasses?: {
+    contentWrapper?: string;
+    timeFrames?: string;
+    dayContent?: string;
+    weekContent?: string;
+    monthContent?: string;
   };
 }
 
