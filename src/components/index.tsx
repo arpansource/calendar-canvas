@@ -29,6 +29,16 @@ const CalendarCanvas = <
       value: defaultDate || new Date(),
     });
   }, [defaultDate]);
+
+  React.useEffect(() => {
+    if (Array.isArray(events)) {
+      dispatch({
+        type: "events:init",
+        value: events,
+      });
+    }
+  }, [events]);
+
   return (
     <CalendarCanvasContext.Provider value={{ ...data, dispatch }}>
       <div className={`calendar-canvas ${className}`}>{children}</div>
