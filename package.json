@@ -1,6 +1,6 @@
 {
   "name": "calendar-canvas",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "A highly customizable calendar library to render your events.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
