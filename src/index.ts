@@ -6,6 +6,7 @@ export { default as CalendarContent } from "./components/calendar-content";
 export { default as CalendarContentWrapper } from "./components/calendar-content/CalendarContentWrapper";
 export { default as CalendarContentHeader } from "./components/calendar-content/content-header";
 export { default as TimeGutter } from "./components/calendar-content/content-header/TimeGutter";
+export { default as WeekLabel } from "./components/calendar-content/content-header/WeekLabel";
 export { default as MonthContentHeader } from "./components/calendar-content/content-header/MonthHeader";
 export { default as WeekContentHeader } from "./components/calendar-content/content-header/WeekHeader";
 export { default as TimeFrames } from "./components/calendar-content/TimeFrames";

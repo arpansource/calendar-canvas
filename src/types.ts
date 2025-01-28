@@ -55,7 +55,15 @@ export interface TimeGutterProps extends ICssProperties, IClassName {}
 export interface CalendarContentWrapperProps extends IWrapper, IClassName {}
 export interface CalendarContentHeaderProps extends IClassName {}
 export interface MonthContentHeaderProps extends IClassName {}
-export interface WeekContentHeaderProps extends IClassName {}
+export interface WeekHeaderLabelProps extends IClassName {
+  date: Date;
+}
+export interface WeekContentHeaderProps extends IClassName {
+  templates?: {
+    timeGutter?: React.FC<TimeGutterProps>;
+    weekLabel?: React.FC<WeekHeaderLabelProps>;
+  };
+}
 export interface TimeFramesProps extends IClassName, ICssProperties {}
 export interface DayLayoutProps extends ICssProperties, IClassName {}
 export interface DayTemplateProps<
