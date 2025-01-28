@@ -35,7 +35,7 @@ const WeekContent: React.FC<CalendarWeekContentProps> = ({
         </div>
       ))}
 
-      <div className="week-content-events absolute w-full h-full top-0 left-0 right-0 bottom-0">
+      <div className="week-content-events">
         {events.map((event, index) => {
           const offset = getEventOffset(event, "week");
           return (

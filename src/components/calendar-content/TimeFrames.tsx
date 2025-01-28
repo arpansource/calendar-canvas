@@ -11,7 +11,7 @@ const TimeFrames: React.FC<TimeFramesProps> = ({ className = "", style }) => {
     <div style={style} className={`time-frames ${className}`}>
       {times.map((tf, index) => {
         return (
-          <div key={index} className="relative">
+          <div key={index}>
             <span className="time-label">
               {dayjs.utc(tf).format("hh:mm a")}
             </span>

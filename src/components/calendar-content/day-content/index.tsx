@@ -32,7 +32,7 @@ const DayContent: React.FC<CalendarDayContentProps> = ({
           <Layout />
         </div>
       ))}
-      <div className="day-content-events absolute w-full h-full top-0 left-0 right-0 bottom-0">
+      <div className="day-content-events">
         {events.map((event, index) => {
           const offset = getEventOffset(event, "day");
           return (
