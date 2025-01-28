@@ -54,8 +54,8 @@ const CalendarContent: React.FC<CalendarContentProps> = ({
         {view === "month" && (
           <MonthContent
             className={`${monthContent}`}
-            template={templates?.content?.week}
-            layout={templates?.layout?.week}
+            template={templates?.content?.month}
+            layout={templates?.layout?.month}
           />
         )}
       </div>
