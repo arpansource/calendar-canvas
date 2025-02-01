@@ -19,13 +19,13 @@
   "author": "Abhishek Prajapati <ap0661236@gmail.com> (https://abhishekprajapati1.com)",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aspanel/calendar-canvas.git"
+    "url": "git+https://github.com/indistack/calendar-canvas.git"
   },
   "bugs": {
     "email": "ap0661236@gmail.com",
-    "url": "https://github.com/aspanel/calendar-canvas/issues"
+    "url": "https://github.com/indistack/calendar-canvas/issues"
   },
-  "homepage": "https://github.com/aspanel/calendar-canvas#readme",
+  "homepage": "https://github.com/indistack/calendar-canvas#readme",
   "license": "MIT",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^28.0.2",
