@@ -1,7 +1,6 @@
 # Calendar Canvas
 
- <img src="./docs/static/img/logo.png" width="200" height="150" alt="Calendar Canvas Logo" />
- <img src="./docs/static/img/logo.png" alt="drawing" style="width:200px;"/>
+ <img src="https://arpansource.github.io/calendar-canvas/img/logo.png" width="200" height="150" alt="Calendar Canvas Logo" />
 
 A highly customizable and lightweight calendar library to render your events. This library offers an easy way to create interactive and customizable calendar components for your React applications.
 
@@ -71,6 +70,9 @@ The `CalendarCanvas` component accepts the following props:
 | `defaultView` | `CalendarCanvasViewUnion`    | `'month'`     | Specifies the default view of the calendar.          |
 | `events`      | `Array<CalendarCanvasEvent>` | `[]`          | An array of events to be displayed on the calendar.  |
 | `className`   | `string`                     | `undefined`   | Optional CSS class to apply to the calendar wrapper. |
+
+## Documentation
+Now we have launched the documentation for the Calendar Canvas library. You can find it [here](https://arpansource.github.io/calendar-canvas/).
 
 ## Development
 
