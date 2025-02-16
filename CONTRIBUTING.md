@@ -1,6 +1,6 @@
 # Contributing to Calendar Canvas
 
-⚠️ For detailed contribution guidelines, please visit our [contribution documentation](https://calendar-canvas.github.io/contributing).
+⚠️ For detailed contribution guidelines, please visit our [contribution documentation](https://arpansource.github.io/calendar-canvas/docs/contributing).
 
 ## Quick Start
 
