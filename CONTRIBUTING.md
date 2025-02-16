@@ -24,4 +24,4 @@
 ## License
 By contributing, you agree that your contributions will be licensed under the MIT License.
 
-For complete guidelines, visit our [contribution documentation](https://calendar-canvas.github.io/contributing).
+For complete guidelines, visit our [contribution documentation](https://arpansource.github.io/calendar-canvas/docs/contributing).
