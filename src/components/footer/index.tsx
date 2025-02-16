@@ -25,13 +25,13 @@ export default function Footer() {
             <h4>Documentation</h4>
             <ul>
               <li>
-                <a href="/docs/intro">Getting Started</a>
+                <a href="docs/intro">Getting Started</a>
               </li>
               <li>
-                <a href="/docs/types">API Reference</a>
+                <a href="docs/types">API Reference</a>
               </li>
               <li>
-                <a href="/docs/category/examples">Examples</a>
+                <a href="docs/category/examples">Examples</a>
               </li>
             </ul>
           </div>
