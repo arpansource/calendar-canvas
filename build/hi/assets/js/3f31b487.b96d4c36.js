@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[8897],{6770:(e,s,c)=>{c.r(s),c.d(s,{default:()=>t});c(6540);var n=c(4848);function t(){return(0,n.jsx)("div",{children:"Motivation"})}}}]);
