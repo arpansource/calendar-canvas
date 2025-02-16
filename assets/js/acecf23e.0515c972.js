@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[1903],{1912:a=>{a.exports=JSON.parse('{"blogBasePath":"/calendar-canvas/blog","blogTitle":"Blog","authorsListPath":"/calendar-canvas/blog/authors"}')}}]);
