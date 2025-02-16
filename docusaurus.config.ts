@@ -11,14 +11,14 @@ const config: Config = {
   favicon: "img/logo.png",
 
   // Set the production url of your site here
-  url: "https://indistack.github.io",
+  url: "https://arpan.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/",
+  baseUrl: "/calendar-canvas/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "indistack", // Usually your GitHub org/user name.
+  organizationName: "arpansource", // Usually your GitHub org/user name.
   projectName: "calendar-canvas", // Usually your repo name.
 
   onBrokenLinks: "throw",
@@ -41,7 +41,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/indistack/calendar-canvas/tree/main/src/docs",
+            "https://github.com/arpansource/calendar-canvas/tree/main/src/docs",
         },
         // blog: {
         //   showReadingTime: true,
@@ -67,7 +67,7 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: "img/docusaurus-social-card.jpg",
+    image: "img/logo.png",
     navbar: {
       title: "Calendar Canvas",
       logo: {
