@@ -12,7 +12,7 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: "Zero Design Dependencies",
-    iconImage: "/img/logo.png",
+    iconImage: "img/logo.png",
     description: (
       <>
         Ship with zero default styles. Build your calendar UI from scratch using
@@ -23,7 +23,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: "Flexible & Customizable",
-    iconImage: "/img/logo.png",
+    iconImage: "img/logo.png",
     description: (
       <>
         Multiple view types (Month/Week/Day), customizable layouts, and
@@ -34,7 +34,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: "Built for React",
-    iconImage: "/img/logo.png",
+    iconImage: "img/logo.png",
     description: (
       <>
         Lightweight, type-safe, and built specifically for React applications.

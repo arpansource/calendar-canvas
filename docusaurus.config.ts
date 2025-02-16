@@ -11,10 +11,11 @@ const config: Config = {
   favicon: "img/logo.png",
 
   // Set the production url of your site here
-  url: "https://arpan.github.io",
+  url: "https://arpansource.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/calendar-canvas/",
+  baseUrl: "/calendar-canvas/", // production only
+  // baseUrl: "/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -40,8 +41,7 @@ const config: Config = {
           sidebarPath: "./sidebars.ts",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/arpansource/calendar-canvas/tree/main/src/docs",
+          editUrl: "https://github.com/arpansource/calendar-canvas/tree/docs",
         },
         // blog: {
         //   showReadingTime: true,

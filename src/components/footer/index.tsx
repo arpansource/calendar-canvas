@@ -9,7 +9,7 @@ export default function Footer() {
           <div className={styles.column}>
             <div className={styles.brand}>
               <img
-                src="/img/logo.png"
+                src="img/logo.png"
                 alt="Calendar Canvas Logo"
                 className={styles.logo}
               />
