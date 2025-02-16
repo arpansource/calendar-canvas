@@ -99,7 +99,7 @@ function CustomCalendar() {
 
 - Check out our [Quick Start Guide](/docs/quick-start) to begin building
 - Deep dive into [Components](/docs/category/components) to understand how to implement them.
-- View our [Hooks Reference](/docs/api) to see how they can be used to create custom UIs.
+- View our [Hooks Reference](/docs/category/hooks) to see how they can be used to create custom UIs.
 
 ## Need Help?
 
