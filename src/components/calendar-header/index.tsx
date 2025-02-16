@@ -17,7 +17,7 @@ const CalendarHeader: React.FC<CalendarHeaderProps> = ({ className = "" }) => {
         {view === "week" && <NavigateWeek />}
         {view === "month" && <NavigateMonth />}
       </div>
-      <div>
+      <div className="calendar-view-buttons">
         <button
           onClick={() => setView("day")}
           className={`${view === "day" && "active"}`}

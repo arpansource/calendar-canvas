@@ -83,7 +83,7 @@ const config: Config = {
         },
         // { to: "/blog", label: "Blog", position: "right" },
         {
-          href: "https://github.com/indistack/calendar-canvas",
+          href: "https://github.com/arpansource/calendar-canvas",
           label: "GitHub",
           position: "right",
         },

@@ -1,9 +1,9 @@
 ---
-sidebar_label: "useShellPositions"
-sidebar_position: 2
+sidebar_label: "Minimal Example"
+sidebar_position: 1
 ---
 
-# useShellPositions
+# Minimal Example
 
 :::info
 
