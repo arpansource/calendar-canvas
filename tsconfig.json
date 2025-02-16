@@ -1,33 +1,3 @@
-// {
-//   "compilerOptions": {
-//     "allowSyntheticDefaultImports": true,
-//     "esModuleInterop": true,
-//     "moduleResolution": "node",
-//     "noUnusedLocals": false,
-//     "noUnusedParameters": false,
-//     "allowUnusedLabels": true,
-//     "skipLibCheck": true,
-//     "noEmitOnError": false,
-//     "strict": true,
-//     "removeComments": false,
-//     "module": "ES2020",
-//     "target": "ES2020",
-//     "allowJs": true,
-//     "checkJs": true,
-//     "alwaysStrict": false,
-//     "baseUrl": "..",
-//     "jsx": "preserve",
-//     "traceResolution": false,
-//     "explainFiles": false,
-//     "paths": {
-//       "react": ["docs/node_modules/@types/react"],
-//       "react-dom": ["docs/node_modules/@types/react-dom"],
-//       "calendar-canvas": ["dist/index.d.ts"]
-//     }
-//   }
-// }
-// 
-
 {
   "extends": "@docusaurus/tsconfig",
   "compilerOptions": {
